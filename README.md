@@ -27,7 +27,7 @@ Bu proje, Python kullanarak film verilerini analiz etmek ve görselleştirmek i�
 ## 🚀 Kullanım
  1. Gerekli kütüphaneleri yükleyin.
    
- 2.analysis.py dosyasını çalıştırın.
+  2.analysis.py dosyasını çalıştırın.
 
  3. Terminalde çıkan adresinizi tarayıcınızda çalıştırın.
 
