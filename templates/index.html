@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Film Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Film Analizleri</h1>
+
+<div class="cards-container">
+
+    <!-- En yüksek IMDB -->
+    <div class="card">
+        <h2>🎬 En Yüksek IMDB</h2>
+         <img src="{{ top_film['Poster'] }}" alt="Film Posteri" class="poster">
+        <p>Film: <b>{{ top_film["Film Adı"] }}</b></p>
+        <p>Puan: {{ top_film["IMDB Puanı"] }}</p>
+        <p>Tür: {{ top_film["Tür"] }}</p>
+        <p>Yıl: {{ top_film["Yıl"] }}</p>
+    </div>
+
+    <!-- En düşük IMDB -->
+    <div class="card">
+        <h2>📉 En Düşük IMDB</h2>
+         <img src="{{ lower_film['Poster'] }}" alt="Film Posteri" class="poster">
+        <p>Film: <b>{{ lower_film["Film Adı"] }}</b></p>
+        <p>Puan: {{ lower_film["IMDB Puanı"] }}</p>
+        <p>Tür: {{ lower_film["Tür"] }}</p>
+        <p>Yıl: {{ lower_film["Yıl"] }}</p>
+    </div>
+
+    <!--En Kısa Film-->
+    <div class="card">
+        <h2>⏳En Kısa Süreli</h2>
+         <img src="{{ min_time['Poster'] }}" alt="Film Posteri" class="poster">
+        <p>Film: <b>{{ min_time["Film Adı"] }}</b></p>
+        <p>Puan: {{ min_time["IMDB Puanı"] }}</p>
+        <p>Tür: {{ min_time["Tür"] }}</p>
+        <p>Yıl: {{ min_time["Yıl"] }}</p>
+        <p>Süre:{{min_time["Süre"]}}</p>
+    </div>
+
+
+<!--En Uzun Film-->
+    <div class="card">
+        <h2>⚡En Uzun Süreli</h2>
+         <img src="{{ max_time['Poster'] }}" alt="Film Posteri" class="poster">
+         <p>Film: <b>{{ max_time["Film Adı"] }}</b></p>
+        <p>Puan: {{ max_time["IMDB Puanı"] }}</p>
+        <p>Tür: {{ max_time["Tür"] }}</p>
+        <p>Yıl: {{ max_time["Yıl"] }}</p>
+        <p>Süre: {{ max_time["Süre"] }}</p>
+    </div>
+
+
+</div>
+
+<h2>📊 Grafikler</h2>
+
+<!-- Yıllara göre film sayısı grafiği -->
+<div class="graph">
+    <h3>Yıllara Göre Film Sayısı</h3>
+    <img src="{{ url_for('static', filename='film_per_year.png') }}" alt="Yıllara Göre Film Sayısı">
+</div>
+
+
+<!-- Türlere göre ortalama puan grafiği -->
+<div class="graph">
+    <h3>Türlere Göre Ortalama IMDB Puanı</h3>
+    <img src="{{ url_for('static', filename='film_per_score.png') }}" alt="Türlere Göre Ortalama IMDB Puanı">
+</div>
+
+
+<!--Türlere göre film sayısı-->
+<div class="graph">
+    <h3>Türlere Göre Film Sayısı</h3>
+    <img src="{{ url_for('static', filename='film_type.png') }}" alt="Türlere Göre Film sayısı">
+</div>
+
+</body>
+</html>
