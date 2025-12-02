@@ -26,6 +26,7 @@ Bu proje, Python kullanarak film verilerini analiz etmek ve görselleştirmek i�
 
 ## 🚀 Kullanım
 1. Gerekli kütüphaneleri yükleyin:
+
 '''bash
 pip install pandas matplotlib flask openpyxl
 
